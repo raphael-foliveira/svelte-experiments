@@ -1,5 +1,5 @@
 <script>
-	import Nicolas from '../lib/Nicolas.svelte';
+	import Foo from '../lib/Foo.svelte';
 
 	let counter = 0;
 
@@ -15,7 +15,7 @@
 	</div>
 	<a href="/some-page">Go to some-page</a>
 	<a href="/form">Go to form</a>
-	<Nicolas thirdName={'FooBar'} />
+	<Foo thirdName={'Quux'} />
 </div>
 
 <style>

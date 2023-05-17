@@ -2,8 +2,8 @@
 	export let thirdName: string;
 </script>
 
-<h3>Nicolas</h3>
-<h3>Raphael</h3>
+<h3>Bar</h3>
+<h3>Baz</h3>
 
 <h3>{thirdName}</h3>
 

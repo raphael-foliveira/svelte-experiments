@@ -1,7 +1,8 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { File } from 'buffer';
 import { writeFile } from 'fs/promises';
 
-export async function POST({ request }) {
+export const POST: RequestHandler = async ({ request }) => {
 	console.log('received post');
 	const requestData = await request.formData();
 	const file = requestData.get('fileData') as unknown as File;
@@ -16,4 +17,4 @@ export async function POST({ request }) {
 			status: 201
 		}
 	);
-}
+};

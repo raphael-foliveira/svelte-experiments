@@ -3,7 +3,8 @@
 	let password = '';
 	export let data: { someData: string };
 
-	const sendData = async () => {
+	const handleSubmit = async (event: Event) => {
+		event.preventDefault();
 		const response = await fetch('/form', {
 			method: 'POST',
 			headers: {
@@ -12,22 +13,12 @@
 			body: JSON.stringify({ userName, password })
 		});
 		const responseData = await response.json();
-
 		console.log(responseData);
 	};
 </script>
 
 <h1>Some data is {data.someData}</h1>
-<form
-	action=""
-	method="POST"
-	on:submit={(event) => {
-		event.preventDefault();
-		console.log(userName);
-		console.log(password);
-		sendData();
-	}}
->
+<form action="" method="POST" on:submit={handleSubmit}>
 	<label for="userName">User name</label>
 	<input
 		on:change={(event) => {

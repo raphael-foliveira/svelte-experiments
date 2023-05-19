@@ -17,7 +17,7 @@
 
 <h1>A form that receives an image</h1>
 
-<form action="" method="POST" on:submit={handleSubmit}>
+<form method="POST" on:submit={handleSubmit}>
 	<label for="imageInput">Send an image</label>
 	<input
 		type="file"

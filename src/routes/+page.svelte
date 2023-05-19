@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Foo from '../lib/Foo.svelte';
 
 	let counter = 0;
